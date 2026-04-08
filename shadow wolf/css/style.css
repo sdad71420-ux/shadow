@@ -1,0 +1,280 @@
+
+/* 🔥 FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;600&display=swap');
+
+/* 🌌 BODY */
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+color:white;
+background: linear-gradient(-45deg,#000,#1a0000,#000,#300000);
+background-size:400% 400%;
+animation:bg 10s infinite alternate;
+}
+
+/* BACKGROUND ANIMATION */
+@keyframes bg{
+0%{background-position:0% 50%;}
+100%{background-position:100% 50%;}
+}
+
+/* 🔝 HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#000;
+border-bottom:1px solid red;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+/* LOGO */
+.logo{
+font-family:'Orbitron';
+font-size:1.6rem;
+letter-spacing:2px;
+text-shadow:0 0 10px red,0 0 20px red;
+}
+
+/* NAV */
+nav button{
+background:none;
+border:none;
+color:white;
+margin:0 8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+nav button:hover{
+color:red;
+text-shadow:0 0 10px red;
+}
+
+/* SECTIONS */
+section{
+display:none;
+padding:20px;
+}
+.active{
+display:block;
+}
+
+/* HEADINGS */
+h2{
+font-family:'Orbitron';
+text-shadow:0 0 10px red;
+}
+
+/* 🎮 GRID */
+.grid{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding-top:10px;
+}
+
+/* 🎮 GAME CARDS */
+.card{
+min-width:200px;
+background:#120000;
+padding:10px;
+border-radius:10px;
+border:1px solid red;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.07);
+box-shadow:0 0 25px red;
+}
+
+.card img{
+width:100%;
+height:120px;
+object-fit:cover;
+border-radius:8px;
+}
+
+/* BUTTONS */
+button{
+background:red;
+color:white;
+border:none;
+padding:10px;
+margin-top:8px;
+width:100%;
+cursor:pointer;
+border-radius:6px;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff1a1a;
+box-shadow:0 0 15px red;
+}
+
+/* INPUTS */
+input, select{
+width:100%;
+padding:10px;
+margin:5px 0;
+background:#000;
+color:white;
+border:1px solid red;
+border-radius:5px;
+}
+
+/* 🎬 NETFLIX STYLE */
+.netflix-row{
+display:flex;
+gap:10px;
+overflow-x:auto;
+padding:10px;
+}
+
+.netflix-card{
+min-width:160px;
+height:240px;
+position:relative;
+cursor:pointer;
+transition:0.3s;
+}
+
+.netflix-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:6px;
+}
+
+.netflix-card:hover{
+transform:scale(1.1);
+z-index:10;
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+width:100%;
+background:linear-gradient(transparent, black);
+padding:10px;
+opacity:0;
+transition:0.3s;
+}
+
+.netflix-card:hover .overlay{
+opacity:1;
+}
+
+/* 🎬 MOVIE PLAYER */
+.movie-player{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+z-index:3000;
+justify-content:center;
+align-items:center;
+}
+
+.movie-content{
+width:90%;
+max-width:900px;
+text-align:center;
+}
+
+.movie-content video{
+width:100%;
+border-radius:10px;
+box-shadow:0 0 30px red;
+}
+
+/* 🎧 SPOTIFY PLAYER */
+.music-player{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#000;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px;
+border-top:1px solid red;
+z-index:2000;
+}
+
+.music-player img{
+width:50px;
+height:50px;
+border-radius:5px;
+}
+
+.music-info{
+flex:1;
+margin:0 10px;
+}
+
+.controls button{
+width:auto;
+margin:0 5px;
+}
+
+/* 📦 POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+justify-content:center;
+align-items:center;
+z-index:2500;
+}
+
+.popup-content{
+background:#120000;
+padding:20px;
+border-radius:10px;
+border:1px solid red;
+box-shadow:0 0 20px red;
+width:300px;
+position:relative;
+}
+
+.close{
+position:absolute;
+top:10px;
+right:15px;
+font-size:22px;
+cursor:pointer;
+color:red;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{
+height:8px;
+}
+::-webkit-scrollbar-thumb{
+background:red;
+border-radius:10px;
+}
+
+/* FADE IN */
+body{
+opacity:0;
+animation:fade 1s forwards, bg 10s infinite alternate;
+}
+
+@keyframes fade{
+to{opacity:1;}
+}
